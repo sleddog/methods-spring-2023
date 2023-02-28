@@ -1,7 +1,7 @@
 myInput = int(input('Enter a number: '))
 n = 1
 
-while n < myInput:#runs the loop till it gets to your number
+while n < (myInput+1):#runs the loop till it gets to your number
     if ((n % 3 == 0) and (n % 5 == 0)):#gets both conditionals 
         print ('FizzBuzz')
     elif (n % 5 == 0):#gets just multiple of 5
@@ -13,3 +13,4 @@ while n < myInput:#runs the loop till it gets to your number
 
         
     n += 1 #increases the number each time in the while loop
+

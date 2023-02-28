@@ -1,2 +1,3 @@
 #!/usr/bin/bash
-python FizzBuzz.py
+python3 FizzBuzz.py
+echo "Finished Running FizzBuzz"
