@@ -1,4 +1,6 @@
-myInput = int(input('Enter a number: '))
+import sys
+
+myInput = int(sys.argv[1])
 n = 1
 
 while n < (myInput+1):#runs the loop till it gets to your number
