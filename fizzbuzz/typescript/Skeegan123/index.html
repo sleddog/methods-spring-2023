@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Keegan Gaffney - FizzBuzz</title>
+  </head>
+  <body>
+    <h1>FizzBuzz in Typescript</h1>
+    <h3>By Keegan Gaffney</h3>
+    <p>
+      Fizzbuzz is a simple programming problem where you print out every number
+      up to n, with the caveat that if a number is divisible by 3 you print the
+      word Fizz, by 5 you print Buzz, and by both you print FizzBuzz. My
+      solution to this problem was written in Typescript.
+    </p>
+    <h2>Documentation</h2>
+    <pre><code class="language-typescript">function main(): void {
+  let arg: number = parseInt(process.argv[2], 10);
+  if (isNaN(arg)) {
+    console.error(&quot;Please specify a number&quot;);
+    process.exit(1);
+  }
+  for (let i = 1; i &lt;= arg; i++) {
+    console.log(fizzbuzz(i));
+  }
+}
+
+function fizzbuzz(n: number): string {
+  if (n % 15 === 0) return &quot;FizzBuzz&quot;;
+  if (n % 3 === 0) return &quot;Fizz&quot;;
+  if (n % 5 === 0) return &quot;Buzz&quot;;
+  return n.toString();
+}
+
+main();
+</code></pre>
+    <p>
+      The above code is my solution to this problem. The main function simply
+      checks to make sure the input is a number, then loops from 1 to that
+      number. Inside this loop, the fizzbuzz function is called for each number
+      in the loop.
+    </p>
+    <p>
+      The fizzbuzz function is where the actual calculations come in. The most
+      important part of this function is the use of the modulo or % operator.
+      This operator essentially outputs the remainder if you were to divide the
+      two numbers. If the output is a 0, that means the first number is
+      divisible by the second number. I used this with if statements to check if
+      the number is divisible by 3, 5, or 15 since 15 is divisible by both 3 and
+      5. I could've probably made this faster by only having if statements for 3
+      and 5 then concatenating the strings together if fizz was already part of
+      the output string. The reason I didn't do this was because I felt this was
+      more readable and easier to understand. The fizzbuzz function then returns
+      a string to the main function to be printed.
+    </p>
+    <h2>Run Locally</h2>
+    <p>In the root of the git repository run:</p>
+    <pre><code class="language-bash">  cd fizzbuzz/typescript/Skeegan123
+</code></pre>
+    <p>
+      Compile the TS file with the compile script (Note this requires Node, npm,
+      and Typescript to be installed on your system):
+    </p>
+    <pre><code class="language-bash">  ./compileFizzbuzz.sh
+</code></pre>
+    <p>Run the program with a number passed in:</p>
+    <pre><code class="language-bash">  ./fizzbuzz.sh 10
+</code></pre>
+    <p>And you are done!</p>
+    <p>
+      <strong>Note:</strong> This requires both Typescript and Node to be
+      installed. The compileFizzbuzz.sh script checks for these dependancies and
+      will exit if one is not detected with an error message telling you to
+      install whichever dependancy is needed.
+    </p>
+    <p>
+      <strong>Another Note:</strong> The compileFizzbuzz.sh script first checks
+      for dependancies with the &quot;command&quot; command. It then runs:
+    </p>
+    <pre><code class="language-bash">  npm i --silent
+  tsc main.ts
+</code></pre>
+    <p>
+      <strong>Final Note:</strong> The fizzbuzz.sh script first checks if node
+      is installed. Then, it checks that main.ts was compiled by looking for the
+      existance of main.js. It then checks if a number was supplied as an
+      argument, if not, it defaults to 25. Finally, the script then runs the
+      command:
+    </p>
+    <pre><code class="language-bash">  node main.js $num
+</code></pre>
+
+    <a href="../../index.html">Back to FizzBuzz</a>
+  </body>
+</html>
