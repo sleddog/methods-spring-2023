@@ -9,14 +9,14 @@ fn main() {
     }
     let up_to : i32 = args[1].parse::<i32>().unwrap();
     for x in 1..up_to+1 {
-        
+        // check for divisibility
         if is_divisible_by_three(x) {
             print!("Fizz");
         }
         if is_divisible_by_five(x) {
             print!("Buzz");
         }
-        if !is_divisible_by_five(x) && !is_divisible_by_three(x) {
+        if !is_divisible_by_five(x) && !is_divisible_by_three(x) { // if not divisible by either, then print number
             print!("{}", x);
         }
         println!();
