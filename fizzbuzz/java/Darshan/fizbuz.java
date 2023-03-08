@@ -4,11 +4,12 @@ import java.util.Scanner;
 
 class fizbuz{
 	public static void main(String[] args){
-		//Scanner sc = new Scanner(System.in);
-		//int n = sc.nextInt();
+		
 		int n = Integer.parseInt(args[0]);	
 
 		for(int i = 1; i<=n; i++){
+
+
 			if(i % 5 == 0 && i % 3 == 0){
 				System.out.println("Fizzbuzz ");
 			}else if (i % 5 == 0){
