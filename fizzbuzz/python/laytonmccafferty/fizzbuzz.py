@@ -1,3 +1,5 @@
+import sys
+
 def fizzbuzz(maxnumber):
     count = 1;
     while count <= maxnumber:
@@ -15,5 +17,5 @@ def fizzbuzz(maxnumber):
             count += 1
 
 if __name__ == '__main__':
-    userInput = int(input("Enter a maximum number: "))
+    userInput = int(sys.argv[1])
     fizzbuzz(userInput)
