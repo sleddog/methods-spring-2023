@@ -15,4 +15,3 @@ while n < (myInput+1):                      #runs the loop till it gets to your 
 
         
     n += 1                                  #increases the number each time in the while loop
-
