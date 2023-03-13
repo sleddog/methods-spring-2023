@@ -1,6 +1,6 @@
 #!/bin/bash
-
-if [ "$#" -lt 1 && "$#" -ge 2]
+chmod +x run.sh
+if [[ "$#" -lt 1 && "$#" -ge 2 ]]
 then
   echo "Incorrect number of args supplied" >&2
   exit 1
