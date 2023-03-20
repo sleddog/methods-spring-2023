@@ -2,7 +2,7 @@
 
 echo "----------"
 
-python ./FizzBuzz.py $1
+python3 ./FizzBuzz.py $1
 
 echo "----------"
 echo ""
