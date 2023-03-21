@@ -6,7 +6,7 @@ When it hits a multiple of 5 it will return Buzz
 When it hits a multiple of 3 & 5 it will return FizzBuzz
 
 
-```
+```python
 import sys
 
 myInput = int(sys.argv[1])
@@ -24,7 +24,7 @@ while n < (myInput+1):                      #runs the loop till it gets to your 
 
         
     n += 1                                  #increases the number each time in the while loop
-    ```
+ ```
 
 Here is a test of me Running the Code
 ![image](https://user-images.githubusercontent.com/55522241/226756792-b88e997a-50a7-45ae-b260-ea98725f1eb1.png)
