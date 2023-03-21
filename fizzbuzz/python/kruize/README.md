@@ -1,4 +1,5 @@
 Navigate to the folder fizzbuzz\python\kruize
+Run the command {chmod +x run.sh}
 Run the command {./run.sh #} and replace # with the max number you want it to count to.
 When it hits a multiple of 3 it will return Fizz
 When it hits a multiple of 5 it will return Buzz
