@@ -1,0 +1,8 @@
+# Global ignores
+.DS_Store
+node_modules
+__pycache__/
+lib/
+
+# Skeegan123's ignores
+fizzbuzz/typescript/Skeegan123/main.js
