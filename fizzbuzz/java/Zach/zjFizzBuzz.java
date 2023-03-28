@@ -1,5 +1,3 @@
-package java1;
-
 public class zjFizzBuzz {
     public static void main(String[] args) {
         
