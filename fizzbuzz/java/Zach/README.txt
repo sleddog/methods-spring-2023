@@ -1,6 +1,9 @@
 FizzBuzz Java Write-up
 Zach Jewett March 21, 2023
 
+To Compile to .class binary:
+    javac zjFizzBuzz.java
+
 To run code from Java file:
     navigate to respective directory and run:
     
