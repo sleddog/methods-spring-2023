@@ -1,7 +1,7 @@
-#FizzBuzz Java Write-up
+#FizzBuzz Java Write-up#
 Zach Jewett March 21, 2023
 
-##Runing the Program
+##Runing the Program##
 To Compile to .class binary:
     javac zjFizzBuzz.java
 
@@ -30,7 +30,7 @@ post-note: "java1" was required as the directory name to prevent an
 "unauthorized package name" exception.
 
 
-##Java Code
+##Java Code##
 
 ```java
 public class zjFizzBuzz {
@@ -76,7 +76,7 @@ public class zjFizzBuzz {
     }
 };
 ```
-##Unit Tests
+##Unit Tests##
 
 To do unit test you can follow the same steps above but with an added value.
 The added value is where you want to start from. To Find a single value just add the same number twice.
