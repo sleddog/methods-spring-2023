@@ -1,6 +1,7 @@
-FizzBuzz Java Write-up
+#FizzBuzz Java Write-up
 Zach Jewett March 21, 2023
 
+##Runing the Program
 To Compile to .class binary:
     javac zjFizzBuzz.java
 
@@ -29,7 +30,7 @@ post-note: "java1" was required as the directory name to prevent an
 "unauthorized package name" exception.
 
 
-Java Code
+##Java Code
 
 ```java
 public class zjFizzBuzz {
@@ -75,3 +76,34 @@ public class zjFizzBuzz {
     }
 };
 ```
+##Unit Tests
+
+To do unit test you can follow the same steps above but with an added value.
+The added value is where you want to start from. To Find a single value just add the same number twice.
+
+To Compile to .class binary:
+    javac zjFizzBuzz.java
+
+To run code from Java file:
+    navigate to respective directory and run:
+    
+        cd .\fizzbuzz\java\Zach\
+        java zjFizzBuzz.java [int] [int]
+
+    run from home directory:
+
+        java .\fizzbuzz\java\Zach\zjFizzBuzz.java [int] [int]
+
+
+To run code from bash shell:
+
+    navigate to respective directory and run:
+        cd .\fizzbuzz\java\Zach
+        ./FizzBuzzShell.sh [int]
+
+where [int] is an integer of your choosing that is passed to serve
+as the FizzBuzz iteration closing condition
+
+
+post-note: "java1" was required as the directory name to prevent an
+"unauthorized package name" exception.
