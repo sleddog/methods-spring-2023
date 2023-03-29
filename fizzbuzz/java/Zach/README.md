@@ -1,4 +1,4 @@
-#FizzBuzz Java Write-up#
+# FizzBuzz Java Write-up #
 Zach Jewett March 21, 2023
 
 ##Runing the Program##
