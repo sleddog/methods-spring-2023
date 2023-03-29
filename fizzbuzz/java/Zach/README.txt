@@ -7,23 +7,23 @@ To Compile to .class binary:
 To run code from Java file:
     navigate to respective directory and run:
     
-        cd .\fizzbuzz\java1\
+        cd .\fizzbuzz\java\Zach\
         java zjFizzBuzz.java [int]
 
     run from home directory:
 
-        java .\fizzbuzz\java1\zjFizzBuzz.java [int]
+        java .\fizzbuzz\java\Zach\zjFizzBuzz.java [int]
 
 
 To run code from bash shell:
 
     navigate to respective directory and run:
-        cd .\fizzbuzz\java1\
+        cd .\fizzbuzz\java\Zach
         ./FizzBuzzShell.sh [int]
 
 where [int] is an integer of your choosing that is passed to serve
 as the FizzBuzz iteration closing condition
 
 
-post-note: "java1" was required as the directory name to prevent an
+post-note: "java" was required as the directory name to prevent an
 "unauthorized package name" exception.
