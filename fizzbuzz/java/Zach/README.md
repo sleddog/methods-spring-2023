@@ -29,6 +29,37 @@ as the FizzBuzz iteration closing condition
 post-note: "java1" was required as the directory name to prevent an
 "unauthorized package name" exception.
 
+##Unit Tests##
+
+To do unit test you can follow the same steps above but with an added value.
+The added value is where you want to start from. To Find a single value just add the same number twice.
+
+To Compile to .class binary:
+    javac zjFizzBuzz.java
+
+To run code from Java file:
+    navigate to respective directory and run:
+    
+        cd .\fizzbuzz\java\Zach\
+        java zjFizzBuzz.java [int] [int]
+
+    run from home directory:
+
+        java .\fizzbuzz\java\Zach\zjFizzBuzz.java [int] [int]
+
+
+To run code from bash shell:
+
+    navigate to respective directory and run:
+        cd .\fizzbuzz\java\Zach
+        ./FizzBuzzShell.sh [int]
+
+where [int] is an integer of your choosing that is passed to serve
+as the FizzBuzz iteration closing condition
+
+
+post-note: "java1" was required as the directory name to prevent an
+"unauthorized package name" exception.
 
 ##Java Code##
 
@@ -36,9 +67,16 @@ post-note: "java1" was required as the directory name to prevent an
 public class zjFizzBuzz {
     public static void main(String[] args) {
         
-        int n = Integer.parseInt(args[0]);
+        int n = Integer.parseInt(args[0]); 
+	int m;
+	
+	if(args.length == 1){
+		m = 1;
+	}else{
+		m = Integer.parseInt(args[1]);
+	}
 
-        for(int i = 1; i <= n; i++) {
+        for(int i = m; i <= n; i++) {
             if(i % 3 == 0 && i % 5 == 0 && i % 7 == 0 && i % 11 == 0) {
                 System.out.println("FizzBuzzPingPong");
             }else if(i % 3 == 0 && i % 5 == 0 && i % 7 == 0){
@@ -76,34 +114,4 @@ public class zjFizzBuzz {
     }
 };
 ```
-##Unit Tests##
 
-To do unit test you can follow the same steps above but with an added value.
-The added value is where you want to start from. To Find a single value just add the same number twice.
-
-To Compile to .class binary:
-    javac zjFizzBuzz.java
-
-To run code from Java file:
-    navigate to respective directory and run:
-    
-        cd .\fizzbuzz\java\Zach\
-        java zjFizzBuzz.java [int] [int]
-
-    run from home directory:
-
-        java .\fizzbuzz\java\Zach\zjFizzBuzz.java [int] [int]
-
-
-To run code from bash shell:
-
-    navigate to respective directory and run:
-        cd .\fizzbuzz\java\Zach
-        ./FizzBuzzShell.sh [int]
-
-where [int] is an integer of your choosing that is passed to serve
-as the FizzBuzz iteration closing condition
-
-
-post-note: "java1" was required as the directory name to prevent an
-"unauthorized package name" exception.
