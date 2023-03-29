@@ -25,5 +25,5 @@ where [int] is an integer of your choosing that is passed to serve
 as the FizzBuzz iteration closing condition
 
 
-post-note: "java" was required as the directory name to prevent an
+post-note: "java1" was required as the directory name to prevent an
 "unauthorized package name" exception.
