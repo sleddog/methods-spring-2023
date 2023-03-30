@@ -1,4 +1,4 @@
-
+import sys
 def fizzbuzz(total_count):
 	number =  1
 	while number <= total_count:
@@ -22,5 +22,5 @@ def filter(number : int) -> str:
 		to_print = str(number)
 	return to_print
 
-
-fizzbuzz(int(sys.argv[1]))
+if __name__ == '__main__':
+	fizzbuzz(int(sys.argv[1]))
