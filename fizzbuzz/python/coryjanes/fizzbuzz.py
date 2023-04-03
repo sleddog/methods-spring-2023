@@ -18,7 +18,7 @@ def filter(number : int) -> str:
 		to_print = to_print + "Ping"
 	if number % 11 == 0:
 		to_print = to_print + "Pong"
-	if number % 5 != 0 and number % 3 != 0 and number % 7 != 0 and number % 11 != 0:
+	if to_print == "":
 		to_print = str(number)
 	return to_print
 
