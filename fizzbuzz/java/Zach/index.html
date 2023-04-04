@@ -15,18 +15,21 @@
     <pre><h4>To run code from Java file:</h4>
     <strong>1. navigate to respective directory and run:</strong>
         
-            cd .\fizzbuzz\java1\
+
+            cd .\fizzbuzz\java\Zach\
             java zjFizzBuzz.java [int]
     
     <strong>2. or to run from home directory:</strong>
     
-            java .\fizzbuzz\java1\zjFizzBuzz.java [int]
+            java .\fizzbuzz\java\Zach\zjFizzBuzz.java [int]
+
     
     
 <strong>To run code from bash shell:</strong>
     
         navigate to respective directory and run:
-            cd .\fizzbuzz\java1\
+            cd .\fizzbuzz\java\Zach\
+
             ./FizzBuzzShell.sh [int]
     
     where <em>[int]</em> is an integer of your choosing that is passed to serve
@@ -36,6 +39,16 @@
 
 <em>post-note: "java1" was required as the directory name to prevent an
 "unauthorized package name" exception.</em></pre>
+
+    
+    <h4>Unit Test</h4>
+    <pre><h4>To run code from bash shell:</h4>
+    <strong>1. navigate to respective directory and run:</strong>
+        
+        navigate to respective directory and run:
+            cd .\fizzbuzz\java\Zach\
+            ./run_test.sh
+
     <br>
 
     <h3>Java class Code</h3>
@@ -47,21 +60,32 @@
     public class zjFizzBuzz {
         public static void main(String[] args) {
             
-            int n = Integer.parseInt(args[0]);
-
-            for(int i = 1; i <= n; i++) {
-                if(i % 3 ==0 && i % 5 == 0) {
-                    System.out.println("FizzBuzz");
+            int n = Integer.parseInt(args[0]); 
+            int m;
+        
+            if(args.length == 1){
+                m = 1;
+            }else{
+                m = Integer.parseInt(args[1]);
+            }
+            for(int i = m; i <= n; i++) {
+                
+                if(i % 3 == 0) {
+                    System.out.print("Fizz");
                 }
-                else if(i % 3 == 0) {
-                    System.out.println("Fizz");
+                if (i % 5 == 0) {
+                    System.out.print("Buzz");
                 }
-                else if (i % 5 == 0) {
-                    System.out.println("Buzz");
+                if(i % 7 == 0){
+                    System.out.print("Ping");
                 }
-                else {
-                    System.out.println(i);
+                if(i % 11 == 0){
+                    System.out.print("Pong");
                 }
+                if ((i % 3 != 0) && (i % 5 != 0) && (i % 7 != 0) && (i % 11 != 0)) {
+                    System.out.print(i);
+                }
+                System.out.println();
             }
         }
     };
@@ -89,3 +113,5 @@
 </html>
 
 <a href="../../index.html">Back to Main</a>
+
+
