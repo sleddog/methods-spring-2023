@@ -17,3 +17,8 @@ Buzz
 6
 7
 ....and so on until 'max number' argument given
+
+## Fizzbuzz++ in python
+Fizzbuzz++ does the same thing as stated above, except now there is also output on numbers divisible by 7 and 11, the output being 'Ping' and 'Pong' respectively. 
+
+Tests have also been added to test out all the functionality of the program. This can be run with 'test.sh'
