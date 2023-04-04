@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #runs the FizzBuzz code
-java zjFizzBuzz.java $1
+java zjFizzBuzz.java $1 $2
 
 #prevents shell from closing upon code completion
 trap 'sleep infinity' EXIT
