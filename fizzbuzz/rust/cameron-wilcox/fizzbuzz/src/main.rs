@@ -16,7 +16,13 @@ fn main() {
         if is_divisible_by_five(x) {
             print!("Buzz");
         }
-        if !is_divisible_by_five(x) && !is_divisible_by_three(x) { // if not divisible by either, then print number
+        if is_divisible_by_seven(x) {
+            print!("Ping");
+        }
+        if is_divisible_by_eleven(x) {
+            print!("Pong");
+        }
+        if !is_divisible_by_five(x) && !is_divisible_by_three(x) && !is_divisible_by_seven(x) && !is_divisible_by_eleven(x) { // if not divisible by either, then print number
             print!("{}", x);
         }
         println!();
@@ -41,5 +47,48 @@ fn is_divisible_by_five(x : i32) -> bool {
     }
     else {
         false
+    }
+}
+
+fn is_divisible_by_seven(x : i32) -> bool {
+    if x % 7 == 0 {
+        true
+    }
+    else {
+        false
+    }
+}
+
+fn is_divisible_by_eleven(x : i32) -> bool {
+    if x % 11 == 0 {
+        true
+    }
+    else {
+        false
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_three() {
+        assert_eq!(is_divisible_by_three(6),true);
+    }
+
+    #[test]
+    fn test_five() {
+        assert_eq!(is_divisible_by_five(10),true);
+    }
+
+    #[test]
+    fn test_seven() {
+        assert_eq!(is_divisible_by_seven(14),true);
+    }
+
+    #[test]
+    fn test_eleven() {
+        assert_eq!(is_divisible_by_eleven(22),true);
     }
 }

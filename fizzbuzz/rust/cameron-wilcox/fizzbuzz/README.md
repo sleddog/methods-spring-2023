@@ -7,3 +7,4 @@
 2. Make sure the repo is up to date
 3. Navigate to the directory fizzbuzz/rust/cameron-wilcox/fizzbuzz
 4. Use ./run.sh \<some-number\>
+5. Test functions can be run by using "cargo test" in the directory
