@@ -3,7 +3,7 @@
 echo "        FizzBuzzed!        "
 echo "###########################"
 
-python fizzbuzz.py $1
+python3 fizzbuzz.py $1
 
 echo "###########################"
 

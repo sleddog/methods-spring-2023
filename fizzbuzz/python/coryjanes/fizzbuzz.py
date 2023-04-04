@@ -1,23 +1,26 @@
 import sys
-
-
 def fizzbuzz(total_count):
 	number =  1
 	while number <= total_count:
 		# if number is divisble by 3 and 5, display 'FizzBuzz' 
-		if ((number % 3 == 0) and (number % 5 == 0)):
-			sys.stdout.write("FizzBuzz")
-			print()
-		# if number is divisible by 3, display 'Fizz'
-		elif number % 3 == 0:
-			sys.stdout.write("Fizz")
-			print()
-		# if number is divisible by 5, display 'Buzz'
-		elif number % 5 == 0:
-			sys.stdout.write("Buzz")
-			print()
-		else:
-			print(number)
+		print(filter(number))
 		number += 1
 
-fizzbuzz(int(sys.argv[1]))
+def filter(number : int) -> str:
+	to_print : str = ""
+	# if number is divisible by 3, display 'Fizz'
+	if number % 3 == 0:
+		to_print = to_print + "Fizz"
+	# if number is divisible by 5, display 'Buzz'
+	if number % 5 == 0:
+		to_print = to_print + "Buzz"
+	if number % 7 == 0:
+		to_print = to_print + "Ping"
+	if number % 11 == 0:
+		to_print = to_print + "Pong"
+	if to_print == "":
+		to_print = str(number)
+	return to_print
+
+if __name__ == '__main__':
+	fizzbuzz(int(sys.argv[1]))

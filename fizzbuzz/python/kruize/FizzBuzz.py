@@ -1,17 +1,26 @@
 import sys
 
-myInput = int(sys.argv[1])
-n = 1
+def fizzbuzz(n):
+    out = ''
+    if (n % 3 == 0):                      # If the number is a multiple of 3, it will print Fizz
+        out += 'Fizz'
+    if (n % 5 == 0):                      # If the number is a multiple of 5, it will print Buzz
+        out += 'Buzz'
+    if (n % 7 == 0):                      # If the number is a multiple of 7, it will print Ping
+        out += 'Ping'
+    if (n % 11 == 0):                     # If the number is a multiple of 11, it will print Pong
+        out += 'Pong'
+    if (out == ''):                       # if out is still empty then it will print the number
+        out = str(n)
+    
+    return out
 
-while n < (myInput+1):                      #runs the loop till it gets to your number
-    if ((n % 3 == 0) and (n % 5 == 0)):     #gets both conditionals 
-        print ('FizzBuzz')
-    elif (n % 5 == 0):                      #gets just multiple of 5
-        print ('Buzz')
-    elif (n % 3 == 0):                      #gets multiple of 3
-        print ('Fizz')
-    else:                                   #just prints the numbers that don't meet a conditional 
-        print (n)
+def main():
+    myInput = int(sys.argv[1])                # Gets the input from the command line
+    n = 1
+    while n < (myInput+1):
+        print(fizzbuzz(n))
+        n += 1
 
-        
-    n += 1                                  #increases the number each time in the while loop
+if __name__ == '__main__':
+    main()
