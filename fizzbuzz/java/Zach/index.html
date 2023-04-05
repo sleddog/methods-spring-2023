@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>FizzBuzz Zach Jewett</title>
+  </head>
+  <body>
+    <h2>FizzBuzz in Java</h2>
+    <h4>Zach Jewett</h4>
+    <a href="../../index.html">Back</a>
+    <br>
+    <h4>Readme</h4>
+    <pre><h4>To run code from Java file:</h4>
+    <strong>1. navigate to respective directory and run:</strong>
+        
+
+            cd .\fizzbuzz\java\Zach\
+            java zjFizzBuzz.java [int]
+    
+    <strong>2. or to run from home directory:</strong>
+    
+            java .\fizzbuzz\java\Zach\zjFizzBuzz.java [int]
+
+    
+    
+<strong>To run code from bash shell:</strong>
+    
+        navigate to respective directory and run:
+            cd .\fizzbuzz\java\Zach\
+
+            ./FizzBuzzShell.sh [int]
+    
+    where <em>[int]</em> is an integer of your choosing that is passed to serve
+    as the FizzBuzz iteration closing condition
+    
+    
+
+<em>post-note: "java1" was required as the directory name to prevent an
+"unauthorized package name" exception.</em></pre>
+
+    
+    <h4>Unit Test</h4>
+    <pre><h4>To run code from bash shell:</h4>
+    <strong>1. navigate to respective directory and run:</strong>
+        
+        navigate to respective directory and run:
+            cd .\fizzbuzz\java\Zach\
+            ./run_test.sh
+
+    <br>
+
+    <h3>Java class Code</h3>
+        <div style="background-color: lightgrey; width: fit-content;">
+            <pre>
+                <code class="java">
+    package java1;
+
+    public class zjFizzBuzz {
+        public static void main(String[] args) {
+            
+            int n = Integer.parseInt(args[0]); 
+            int m;
+        
+            if(args.length == 1){
+                m = 1;
+            }else{
+                m = Integer.parseInt(args[1]);
+            }
+            for(int i = m; i <= n; i++) {
+                
+                if(i % 3 == 0) {
+                    System.out.print("Fizz");
+                }
+                if (i % 5 == 0) {
+                    System.out.print("Buzz");
+                }
+                if(i % 7 == 0){
+                    System.out.print("Ping");
+                }
+                if(i % 11 == 0){
+                    System.out.print("Pong");
+                }
+                if ((i % 3 != 0) && (i % 5 != 0) && (i % 7 != 0) && (i % 11 != 0)) {
+                    System.out.print(i);
+                }
+                System.out.println();
+            }
+        }
+    };
+                </code>
+            </pre>
+        </div>
+        <br>
+
+        <h3>Java Shell Code</h3>
+        <div style="background-color: lightgrey; width: fit-content;">
+            <pre>
+                <code class="java">
+    #!/bin/bash
+
+    #runs the FizzBuzz code
+    java zjFizzBuzz.java $1
+    
+    #prevents shell from closing upon code completion
+    trap 'sleep infinity' EXIT
+    echo "CTRL+C to exit shell"
+                </code>
+            </pre>
+        </div>
+  </body>
+</html>
+
+<a href="../../index.html">Back to Main</a>
+
+

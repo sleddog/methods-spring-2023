@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="fizzbuzz-in-python">FizzBuzz++ in Python</h1>
+    <p>
+      Fizzbuzz++ is a simple programming problem where you print out every number up to n, with the caveat that if a number is divisible by
+      3 you print the word Fizz, by 5 you print Buzz, by 7 you print Ping, and by 11 you print Pong. This solution is written in Python
+    </p>
+    <h2 id="documentation">Documentation</h2>
+    <pre><code class="lang-python"><span class="hljs-keyword">import</span> sys
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fizzbuzz</span><span class="hljs-params">(n)</span>:</span>
+    out = <span class="hljs-string">''</span>
+    <span class="hljs-keyword">if</span> (n % <span class="hljs-number">3</span> == <span class="hljs-number">0</span>):                      <span class="hljs-comment"># If the number is a multiple of 3, it will print Fizz</span>
+        out += <span class="hljs-string">'Fizz'</span>
+    <span class="hljs-keyword">if</span> (n % <span class="hljs-number">5</span> == <span class="hljs-number">0</span>):                      <span class="hljs-comment"># If the number is a multiple of 5, it will print Buzz</span>
+        out += <span class="hljs-string">'Buzz'</span>
+    <span class="hljs-keyword">if</span> (n % <span class="hljs-number">7</span> == <span class="hljs-number">0</span>):                      <span class="hljs-comment"># If the number is a multiple of 7, it will print Ping</span>
+        out += <span class="hljs-string">'Ping'</span>
+    <span class="hljs-keyword">if</span> (n % <span class="hljs-number">11</span> == <span class="hljs-number">0</span>):                     <span class="hljs-comment"># If the number is a multiple of 11, it will print Pong</span>
+        out += <span class="hljs-string">'Pong'</span>
+    <span class="hljs-keyword">if</span> (out == <span class="hljs-string">''</span>):                       <span class="hljs-comment"># if out is still empty then it will print the number</span>
+        out = str(n)
+
+    <span class="hljs-keyword">return</span> out
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    myInput = int(sys.argv[<span class="hljs-number">1</span>])                <span class="hljs-comment"># Gets the input from the command line</span>
+    n = <span class="hljs-number">1</span>
+    <span class="hljs-keyword">while</span> n &lt; (myInput+<span class="hljs-number">1</span>):
+        print(fizzbuzz(n))
+        n += <span class="hljs-number">1</span>
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">'__main__'</span>:
+    main()
+</code></pre>
+    <p>
+      The above code is the solution to this problem in Python. The main function simply checks for an input, then loops from 1 to that
+      number. Inside this loop, the fizzbuzz function is called for each number in the loop.
+    </p>
+    <p>
+      The fizzbuzz function is where the actual calculations come in. The most important part of this function is the use of the modulo or %
+      operator. This operator essentially outputs the remainder if you were to divide the two numbers. If the output is a 0, that means the
+      first number is divisible by the second number. This was used with if statements to check if the number is divisible by 3, 5, 7, or
+      11.Then, depending on what the number is divisible by, the strings Fizz, Buzz, Ping, and Pong can be added to the output string.
+    </p>
+    <h2 id="instructions">Instructions</h2>
+    <p>In the root of the git repository run:</p>
+    <pre><code class="lang-bash">  <span class="hljs-keyword">cd</span> fizzbuzz/<span class="hljs-keyword">python</span>/kruize
+</code></pre>
+    <p>
+      <strong>Note:</strong> You may have to run either
+      <a href="https://www.geeksforgeeks.org/dos2unix-unix2dos-commands/">dos2unix or unix2dos</a> if you are having problems with line
+      endings on your system.
+    </p>
+    <p>Run the test script to unit test the fizzbuzz function:</p>
+    <pre><code class="lang-bash">  ./<span class="hljs-keyword">test</span>.<span class="hljs-keyword">sh</span>
+</code></pre>
+    <p>Run the program with a number passed in:</p>
+    <pre><code class="lang-bash">  ./<span class="hljs-keyword">run</span>.<span class="bash">sh 20</span>
+</code></pre>
+    <p>And you are done!</p>
+
+    <a href="../../index.html">Back to FizzBuzz</a>
+  </body>
+</html>
