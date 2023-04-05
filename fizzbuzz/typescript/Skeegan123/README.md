@@ -7,6 +7,8 @@ Fizzbuzz is a simple programming problem where you print out every number up to 
 ## Documentation
 
 ```typescript
+export
+
 function main(): void {
   let arg: number = parseInt(process.argv[2], 10);
   if (isNaN(arg)) {
@@ -19,9 +21,13 @@ function main(): void {
 }
 
 function fizzbuzz(n: number): string {
+  if (n % 1155 === 0) return "FizzBuzzPingPong";
+  if (n % 77 === 0) return "PingPong";
   if (n % 15 === 0) return "FizzBuzz";
   if (n % 3 === 0) return "Fizz";
-  if (n % 5 === 0) return "Buzz";
+  if (n % 5 === 0) return "Buzz"; 
+  if (n % 7 === 0) return "Ping";
+  if (n % 11 === 0) return "Pong";
   return n.toString();
 }
 
@@ -51,6 +57,12 @@ Run the program with a number passed in:
   ./fizzbuzz.sh 10
 ```
 
+To run the unit test suite, simply run the following command:
+
+```bash
+   jest
+```
+
 And you are done!
 
 **Note:** This requires both Typescript and Node to be installed. The compileFizzbuzz.sh script checks for these dependancies and will exit if one is not detected with an error message telling you to install whichever dependancy is needed.
@@ -60,6 +72,15 @@ And you are done!
 ```bash
   npm i --silent
   tsc main.ts
+```
+
+**Testing Note:** The following commands must be run before the testing 
+suite will work correctly.
+
+```bash
+   npm install jest --save-dev
+   npm install ts-jest --save-dev
+   npm install @types/jest --save-dev
 ```
 
 **Final Note:** The fizzbuzz.sh script first checks if node is installed. Then, it checks that main.ts was compiled by looking for the existance of main.js. It then checks if a number was supplied as an argument, if not, it defaults to 25. Finally, the script then runs the command:
