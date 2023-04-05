@@ -11,7 +11,7 @@ public class FizzBuzzTests {
         String expected = "1\r\n2\r\nFizz\r\n4\r\n5\r\n";
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
-        zjFizzBuzz.main(args);
+        fizbuz.main(args);
         String received = outContent.toString();
         assertEquals(expected, received);
     }
