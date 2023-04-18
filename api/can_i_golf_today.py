@@ -11,7 +11,6 @@ def can_i_golf():
         return 'Please provide both city and state as URL parameters.', 400
 
     # Make a request to the OpenWeatherMap API to retrieve the weather information for the given location
-    weather_api_key = 'ed14717162c738f7249f12572c878a63'
     # url = f'https://api.openweathermap.org/data/3.0/weather?q={city},{state},US&appid={weather_api_key}&units=imperial'
     # url = f'https://api.openweathermap.org/data/3.0/onecall?lat=47.5053&lon=111.3008&exclude=hourly,daily&appid={weather_api_key}'
 
